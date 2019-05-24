@@ -1,0 +1,80 @@
+{
+  "name": "lametric-adapter",
+  "display_name": "LaMetric",
+  "version": "0.1.0",
+  "description": "Send notifications to your LaMetric",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tim-hellhake/lametric-adapter.git"
+  },
+  "author": "Tim Hellhake",
+  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://github.com/tim-hellhake/lametric-adapter/issues"
+  },
+  "homepage": "https://github.com/tim-hellhake/lametric-adapter#readme",
+  "files": [
+    "LICENSE",
+    "SHA256SUMS",
+    "index.js",
+    "lametric-adapter.js"
+  ],
+  "moziot": {
+    "api": {
+      "min": 2,
+      "max": 2
+    },
+    "plugin": true,
+    "exec": "{nodeLoader} {path}",
+    "schema": {
+      "type": "object",
+      "required": [
+        "apiKey"
+      ],
+      "properties": {
+        "hostname": {
+          "type": "string",
+          "title": "The address or hostname of your LaMetric"
+        },
+        "apiKey": {
+          "type": "string",
+          "title": "The api key of your LaMetric (https://developer.lametric.com/user/devices)"
+        },
+        "messages": {
+          "type": "array",
+          "title": "Predefined messages",
+          "items": {
+            "type": "object",
+            "title": "A predefined message",
+            "required": [
+              "name",
+              "message"
+            ],
+            "properties": {
+              "name": {
+                "type": "string",
+                "title": "The name of the action"
+              },
+              "message": {
+                "type": "string",
+                "title": "The text of the message"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "dependencies": {
+    "node-fetch": "^2.6.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.16.0"
+  }
+}
