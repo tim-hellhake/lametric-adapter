@@ -3,7 +3,7 @@
   "id": "lametric-adapter",
   "name": "LaMetric",
   "short_name": "LaMetric",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Send notifications to your LaMetric",
   "homepage_url": "https://github.com/tim-hellhake/lametric-adapter#readme",
   "license": "MPL-2.0",
