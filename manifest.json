@@ -1,37 +1,22 @@
 {
-  "name": "lametric-adapter",
-  "display_name": "LaMetric",
+  "manifest_version": 1,
+  "id": "lametric-adapter",
+  "name": "LaMetric",
+  "short_name": "LaMetric",
   "version": "0.1.0",
   "description": "Send notifications to your LaMetric",
-  "main": "lib/index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc -p ."
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/tim-hellhake/lametric-adapter.git"
-  },
-  "author": "Tim Hellhake",
+  "homepage_url": "https://github.com/tim-hellhake/lametric-adapter#readme",
   "license": "MPL-2.0",
-  "bugs": {
-    "url": "https://github.com/tim-hellhake/lametric-adapter/issues"
+  "author": "Tim Hellhake",
+  "gateway_specific_settings": {
+    "webthings": {
+      "exec": "{nodeLoader} {path}",
+      "strict_min_version": "0.10.0",
+      "strict_max_version": "*",
+      "primary_type": "adapter"
+    }
   },
-  "homepage": "https://github.com/tim-hellhake/lametric-adapter#readme",
-  "files": [
-    "LICENSE",
-    "SHA256SUMS",
-    "lib/index.js",
-    "lib/lametric-adapter.js",
-    "manifest.json"
-  ],
-  "moziot": {
-    "api": {
-      "min": 2,
-      "max": 2
-    },
-    "plugin": true,
-    "exec": "{nodeLoader} {path}",
+  "options": {
     "schema": {
       "type": "object",
       "required": [
@@ -70,13 +55,5 @@
         }
       }
     }
-  },
-  "dependencies": {
-    "node-fetch": "^2.6.0"
-  },
-  "devDependencies": {
-    "@types/node": "^12.12.6",
-    "@types/node-fetch": "^2.5.3",
-    "typescript": "^3.7.2"
   }
 }
