@@ -23,7 +23,7 @@
     "SHA256SUMS",
     "lib/index.js",
     "lib/lametric-adapter.js",
-    "lib/lametric-notifier.ts",
+    "lib/lametric-notifier.js",
     "manifest.json"
   ],
   "moziot": {
