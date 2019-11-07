@@ -133,5 +133,12 @@ export class LaMetricAdapter extends Adapter {
     addonManager.addAdapter(this);
     const device = new LaMetricDevice(this, manifest);
     this.handleDeviceAdded(device);
+
+    try {
+      const { LaMetricNotifier } = require('./lametric-notifier');
+      new LaMetricNotifier(addonManager, manifest, device);
+    } catch (e) {
+      console.error(e);
+    }
   }
 }
