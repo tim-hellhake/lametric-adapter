@@ -3,10 +3,10 @@
   "display_name": "LaMetric",
   "version": "0.1.0",
   "description": "Send notifications to your LaMetric",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint ."
+    "build": "tsc -p ."
   },
   "repository": {
     "type": "git",
@@ -21,8 +21,8 @@
   "files": [
     "LICENSE",
     "SHA256SUMS",
-    "index.js",
-    "lametric-adapter.js"
+    "lib/index.js",
+    "lib/lametric-adapter.js"
   ],
   "moziot": {
     "api": {
@@ -74,7 +74,8 @@
     "node-fetch": "^2.6.0"
   },
   "devDependencies": {
-    "babel-eslint": "^10.0.1",
-    "eslint": "^5.16.0"
+    "@types/node": "^12.12.6",
+    "@types/node-fetch": "^2.5.3",
+    "typescript": "^3.7.2"
   }
 }

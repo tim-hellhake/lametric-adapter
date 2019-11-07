@@ -6,7 +6,6 @@
 
 'use strict';
 
-const LaMetricAdapter = require('./lametric-adapter');
+import { LaMetricAdapter } from './lametric-adapter';
 
-module.exports =
-    (addonManager, manifest) => new LaMetricAdapter(addonManager, manifest);
+export = (addonManager: any, manifest: any) => new LaMetricAdapter(addonManager, manifest);
