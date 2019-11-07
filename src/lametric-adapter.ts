@@ -17,7 +17,7 @@ interface Message {
   message: string
 }
 
-class LaMetricDevice extends Device {
+export class LaMetricDevice extends Device {
   private config: any;
   private messages: { [key: string]: string };
 
